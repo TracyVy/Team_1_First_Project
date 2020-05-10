@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      .col-md-3 {
+        margin-top: 30px;
+        padding: 10px;
+        background-color: cadetblue;
+        color: rgb(245, 241, 236);
+        min-height: 300px;
+        border-radius: 2%;
+      }
+      .col-md-3 h3 {
+        text-align: center;
+        padding-bottom: 2px;
+      }
+      .col-md-3 li {
+        list-style: circle;
+      }
+      #onDemand,
+      #silver,
+      #gold {
+        position: absolute;
+        justify-items: center;
+        bottom: 10px;
+      }
+    </style>
+
+    <title>Subscriptions</title>
+  </head>
+  <body>
+    <h2>Subscriptions</h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+          <h3>On Demand</h3>
+          <ul>
+            <li>1 hour session</li>
+          </ul>
+          <button type="button" id="onDemand">
+            $100
+          </button>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+          <h3>Silver Package</h3>
+          <ul>
+            <li>Monthly Subscription</li>
+            <li>3 specialized Doula sessions/week</li>
+            <li>Plus Nutrition consultation</li>
+          </ul>
+          <button type="button" id="silver">
+            $900
+          </button>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+          <h3>Gold Package</h3>
+          <ul>
+            <li>Monthly Subscription</li>
+            <li>5 specialized Doula sessions/week</li>
+            <li>Plus Nutrition consultation</li>
+            <li>Plus birthing assistance</li>
+            <li>Plus sleep training for new baby</li>
+          </ul>
+          <button type="button" id="gold">
+            $1,500
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="tracy.js"></script>
+  </body>
+</html>
