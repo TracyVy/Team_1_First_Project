@@ -21,21 +21,21 @@
         padding: 10px;
         background-color: cadetblue;
         color: rgb(245, 241, 236);
-        min-height: 300px;
+        min-height: 400px;
         border-radius: 2%;
       }
-      .col-md-3 h3 {
+      .col-md-3 h3,
+      .col-md-3 h5 {
         text-align: center;
-        padding-bottom: 2px;
       }
       .col-md-3 li {
+        padding-top: 5px;
         list-style: circle;
       }
-      #onDemand,
-      #silver,
-      #gold {
+      .selectBtn {
         position: absolute;
         justify-items: center;
+        align-content: center;
         bottom: 10px;
       }
     </style>
@@ -49,38 +49,43 @@
       <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-3">
-          <h3>On Demand</h3>
+          <h3>On-Call</h3>
+          <h5>$100/hr</h5>
           <ul>
-            <li>1 hour session</li>
+            <li>1 time hour-long session</li>
+            <!-- <li></li>
+            <li></li> -->
           </ul>
-          <button type="button" id="onDemand">
-            $100
+          <button type="button" class="selectBtn" id="select_oC">
+            Select
           </button>
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-3">
-          <h3>Silver Package</h3>
+          <h3>Doula's Basic</h3>
+          <h5>$1,000/mo</h5>
           <ul>
-            <li>Monthly Subscription</li>
+            <li>3 months commitment</li>
             <li>3 specialized Doula sessions/week</li>
             <li>Plus Nutrition consultation</li>
           </ul>
-          <button type="button" id="silver">
-            $900
+          <button type="button" class="selectBtn" id="select_dB">
+            Select
           </button>
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-3">
-          <h3>Gold Package</h3>
+          <h3>Doula's Expert</h3>
+          <h5>$1,500/mo</h5>
           <ul>
-            <li>Monthly Subscription</li>
+            <li>6 months commitment</li>
             <li>5 specialized Doula sessions/week</li>
             <li>Plus Nutrition consultation</li>
             <li>Plus birthing assistance</li>
             <li>Plus sleep training for new baby</li>
           </ul>
-          <button type="button" id="gold">
-            $1,500
+          <button type="button" class="selectBtn" id="select_dX">
+            Select
           </button>
         </div>
       </div>
@@ -102,6 +107,8 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <!-- Adding stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
     <script src="tracy.js"></script>
   </body>
 </html>
