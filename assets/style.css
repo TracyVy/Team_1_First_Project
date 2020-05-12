@@ -23,15 +23,6 @@ body {
   color: crimson;
 }
 
-/* .carousel-caption {
-    position: static;
-}
-
-.item {
-    height: 480px;
-    width: 1200px;
-    background-color: aquamarine;
-} */
 .footer {
   height: 150px inherit !important;
 }
