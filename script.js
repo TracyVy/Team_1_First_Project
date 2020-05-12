@@ -1,11 +1,11 @@
 // Use of "browser payment APIs". Get doc ready for jQuery
 var stripeAPI = Stripe("pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp");
-var yesOnCall = document.getElementById("select_oC");
-var yesBasic = document.getElementById("select_dB");
-var yesExpert = document.getElementById("select_dX");
-var prodOnCall = "prod_HGIp8SvMNtQeca";
-var prodBasic = "prod_HGCJfczaUxxEbY";
-var prodExpert = "prod_HGCNajIFmRf5Mm";
+var yesOC = document.getElementById("select_oC");
+var yesBS = document.getElementById("select_BS");
+var yesPPS = document.getElementById("select_PPS");
+var prodOC = "prod_HGG980qHRkY4Du";
+var prodBS = "prod_HGGB6Gp8mn4dyg";
+var prodPPS = "prod_HGbXaI4fE4JYfa";
 
 var paymentRequest = stripe.paymentRequest({
   country: "US",
