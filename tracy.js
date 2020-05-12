@@ -7,9 +7,6 @@ var prodOnCall = "prod_HGIp8SvMNtQeca";
 var prodBasic = "prod_HGCJfczaUxxEbY";
 var prodExpert = "prod_HGCNajIFmRf5Mm"
 
-function getProdId() {
-  
-}
 var paymentRequest = stripe.paymentRequest({
   country: "US",
   currency: "usd",
