@@ -1,140 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Team_1_First_Project/assets/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Services & Subscriptions</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+      background-color: rgb(170, 190, 207) inherit !important
+      }
+    .navbar {
+        height: 90px;
+      }
+    #description {
+      margin-top: 125px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .col-md-4 {
+      margin-top: 30px;
+      padding: 10px;
+      background-color: cadetblue;
+      color: rgb(245, 241, 236);
+      min-height: 400px;
+      border-radius: 2%;
+      border-left: beige;
+    }
+    .col-md-4 h3,
+    .col-md-4 h5 {
+      text-align: center;
+    }
+    .col-md-4 li {
+      padding-top: 5px;
+      list-style: circle;
+    }
+    .selectBtn {
+      position: absolute;
+      margin-left: 100px;
+      bottom: 10px;
+      border-radius: 10%;
+    }
+  </style>
 
-    <title>Project 1</title>
-</head>
-
-<body class="card" style="background-color: beige;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning ">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">Doulaville</a>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
     <div class="container">
-        <h2 class="text-center">Birth support</h2>
-
-        <p>
-            Birth Doulas remain current in evidence-based practices and work hard to protect and support each couple’s
-            desires and personal plans for the birth of their baby.
-        </p>
-        <br>
-        <br>
-        <h5 class="text-success text-center">Our Birth Services Include:</h5>
-        <br>
-
-
-        <p class="text-justify">
-            * 3 prenatal home visits
-            <br>
-            <br>
-            * 2 postnatal home visits after the birth of your newborn
-            <br>
-            <br>
-            * On call support from your 37th week until your baby is born
-            <br>
-            <br>
-            * Guidance and support for you and your partner during labor and birth
-            <br>
-            <br>
-            * Breastfeeding assistance immediately after your baby is born
-            <br>
-            <br>
-            * Photos of birth and newborn baby if you desire
-            <br>
-            <br>
-            * The story of your birth; as witnessed by the doula if you desire
-            <br>
-            <br>
-            * Phone contact during pregnancy and after the birth
-            <br>
-            <br>
-            <br>
-
-        </p>
-        <h2 class="text-center">Postpartum Support</h2>
-        <p>Postpartum Doulas work with couples to identify what type of support they need.Our doulas are experienced
-            with
-            multiples, preemies and special needs babies so we can help your family get off to a great start whatever
-            your
-            unique situation might be.
-            <br>
-            <br>
-
-            <h5 class="text-success text-center">Our postpartum services include:</h5>
-            <br>
-
-            <p>
-                Regularly visiting at your home during the early days after birth and into the first few months
-                postpartum
-                <br>
-                <br>
-                Providing physical, emotional, educational and practical support to the family following the birth of
-                the
-                baby
-                <br>
-                <br>
-                Caring for the mother, giving her time to recuperate and relax
-                <br>
-                <br>
-                Assisting with breastfeeding issues, one-on-one or over the phone counseling
-                <br>
-                <br>
-                Helping reduce family stress by screening for postpartum mood disorders
-                <br>
-                <br>
-                Assisting with newborn care such as diapering, bathing, and comforting
-                <br>
-                <br>
-                Providing information on baby soothing techniques
-                <br>
-                <br>
-                Helping with baby sleep issues
-                <br>
-                <br>
-                Providing day & overnight care
-                <br>
-                <br>
-            </p>
-
-            <h5><em>Please contact Us and our Admin team will get in touch with you as soon as possible</em></h5>
-
-
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Doulaville</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <footer class="bg-dark text-light">
-
-        <h3 class="text-center">Doulaville LLC</h3>
-        <p class="text-center">www.doulaville.com</p>
-    </footer>
+  </nav>
+    
+  <div class="container" id="description">
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+    <h3 class="text-center">Birth support</h3>
+    <p> Birth Doulas remain current in evidence-based practices and work hard to
+        protect and support each couple’s desires and personal plans for the
+        birth of their baby.
+    </p>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="row"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+    <h3 class="text-center">Postpartum Support</h3>
+    <p> Postpartum Doulas work with couples to identify what type of support
+        they need.Our doulas are experienced with multiples, preemies and
+        special needs babies so we can help your family get off to a great start
+        whatever your unique situation might be.
+    </p>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+    
+  <h2>Subscriptions</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>On-Call</h3>
+        <h5>$100/hr</h5>
+        <ul>
+          <li>1 time hour-long session</li>
+          <!-- <li></li>
+          <li></li> -->
+        </ul>
+        <button type="button" class="selectBtn" id="select_oC">
+          Select
+        </button>
+      </div>
+      <div class="col-md-4">
+        <h3>Birth Support</h3>
+        <h5>$1,000/mo</h5>
+        <ul>
+          <li>3 prenatal home visits</li>
+          <li>2 postnatal home visits after the birth of your newborn</li>
+          <li>On call support from your 37th week until birth of baby</li>
+          <li>
+            Guidance and support for you and your partner during labor and
+              birth
+          </li>
+          <li>
+              Breastfeeding assistance immediately after your baby is born
+          </li>
+          <li>Photos of birth and newborn baby if you desire</li>
+          <li>
+              The story of your birth; as witnessed by the doula if you desire
+          </li>
+          <li>Phone contact during pregnancy and after the birth</li>
+        </ul>
+        <button type="button" class="selectBtn" id="select_dB">
+            Select
+        </button>
+      </div>
+      <div class="col-md-4">
+        <h3>Postpartum Support</h3>
+        <h5>$1,500/mo</h5>
+        <ul>
+          <li>Regularly visiting at your home during the early days after birth and
+                into the first few months postpartum</li>
+          <li>Providing physical, emotional, educational and practical support to the
+                family following the birth of the baby</li>
+          <li>Caring for the mother, giving her time to recuperate and relax</li>
+          <li>Assisting with breastfeeding issues, one-on-one or over the phone
+                counseling</li>
+          <li>Helping reduce family stress by screening for postpartum mood disorders</li>
+          <li>Assisting with newborn care such as diapering, bathing, and comforting</li>
+          <li>Providing information on baby soothing techniques</li>
+          <li>Helping with baby sleep issues</li>
+          <li>Providing day & overnight care</li>
+        </ul>
+      </div>
+    </div>
+   
+  <footer class="bg-dark text-light">
+    <h3 class="text-center">Doulaville LLC</h3>
+    <p class="text-center">www.doulaville.com</p>
+  </footer>
+  <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+  ></script>
+  <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+  ></script>
+  <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+  ></script>
+    <!-- Adding stripe.js -->
+    <!-- <script src="https://js.stripe.com/v3/"></script> -->
+    <script src="script.js"></script>
 </body>
-
 </html>
