@@ -9,6 +9,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <script src="https://js.stripe.com/v3/"></script>
     <title>Services & Subscriptions</title>
   </head>
   <style>
@@ -44,18 +45,11 @@
       padding-top: 5px;
       list-style: circle;
     }
-    .selectBtn {
+    .form {
       position: absolute;
       margin-left: 140px;
       bottom: 30px;
-      border-radius: 10%;
     }
-    /* footer {
-      padding: 5px;
-      height: 70px;
-      margin-top: 10px;
-      width: 100%;
-    } */
   </style>
 
 <body>
@@ -121,9 +115,16 @@
           <!-- <li></li>
           <li></li> -->
         </ul> 
-        <button type="button" class="selectBtn" id="select_OC">
-          Select
-        </button>
+        <form action="./thanks.html" method="POST">
+          <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp"
+          data-amount="10000"
+          data-name="Doulaville"
+          data-description="Doula On Call - 1 hour"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"></script>
+        </form>
       </div>
       <div class="col-md-4">
         <h3>Birth Support</h3>
@@ -145,9 +146,16 @@
           </li>
           <li>Phone contact during pregnancy and after the birth</li>
         </ul>
-        <button type="button" class="selectBtn" id="select_BS">
-          Select
-        </button>
+        <form action="./thanks.html" method="POST">
+          <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp"
+          data-amount="100000"
+          data-name="Doulaville"
+          data-description="Doula - Birth Support"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"></script>
+        </form>
       </div>
       <div class="col-md-4">
         <h3>Postpartum Support</h3>
@@ -164,9 +172,15 @@
           <li>Helping with baby sleep issues</li>
           <li>Providing day & overnight care</li>
         </ul>
-        <button type="button" class="selectBtn" id="select_PPS">
-          Select
-        </button>
+        <form action="./thanks.html" method="POST">
+          <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp"
+          data-amount="150000"
+          data-name="Doulaville"
+          data-description="Doula - Postpartum Support"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"></script>
       </div>
     </div>
    
