@@ -1,5 +1,7 @@
-.thumbnail {
-  width: 50 px;
-  height: 50 px;
+.img-container {
+  width: 500px;
 }
 
+.carousel {
+  image-orientation: flip;
+}
