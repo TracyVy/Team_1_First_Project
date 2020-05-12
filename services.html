@@ -9,6 +9,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <script src="https://js.stripe.com/v3/"></script>
     <title>Services & Subscriptions</title>
   </head>
   <style>
@@ -20,19 +21,21 @@
         height: 90px;
       }
     #description {
-      margin-top: 125px;
+      margin-top: 100px;
     }
     h2 {
+      margin-top: 10px;
       text-align: center;
     }
     .col-md-4 {
-      margin-top: 30px;
+      margin-top: 10px;
       padding: 10px;
       background-color: cadetblue;
       color: rgb(245, 241, 236);
-      min-height: 400px;
+      min-height: 600px;
       border-radius: 2%;
       border-left: beige;
+      border-left: solid;
     }
     .col-md-4 h3,
     .col-md-4 h5 {
@@ -42,11 +45,10 @@
       padding-top: 5px;
       list-style: circle;
     }
-    .selectBtn {
+    .form {
       position: absolute;
-      margin-left: 100px;
-      bottom: 10px;
-      border-radius: 10%;
+      margin-left: 140px;
+      bottom: 30px;
     }
   </style>
 
@@ -80,26 +82,26 @@
     
   <div class="container" id="description">
     <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-    <h3 class="text-center">Birth support</h3>
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+    <h3 class="text-center">Birth Support</h3>
     <p> Birth Doulas remain current in evidence-based practices and work hard to
         protect and support each couple’s desires and personal plans for the
         birth of their baby.
     </p>
     </div>
-    <div class="col-md-2"></div>
+    <div class="col-md-1"></div>
     <div class="row"></div>
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
     <h3 class="text-center">Postpartum Support</h3>
     <p> Postpartum Doulas work with couples to identify what type of support
-        they need.Our doulas are experienced with multiples, preemies and
+        they need. Our doulas are experienced with multiples, preemies and
         special needs babies so we can help your family get off to a great start
         whatever your unique situation might be.
     </p>
     </div>
-    <div class="col-md-2"></div>
+    <div class="col-md-1"></div>
   </div>
     
   <h2>Subscriptions</h2>
@@ -112,10 +114,17 @@
           <li>1 time hour-long session</li>
           <!-- <li></li>
           <li></li> -->
-        </ul>
-        <button type="button" class="selectBtn" id="select_oC">
-          Select
-        </button>
+        </ul> 
+        <form action="./thanks.html" method="POST">
+          <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp"
+          data-amount="10000"
+          data-name="Doulaville"
+          data-description="Doula On Call - 1 hour"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"></script>
+        </form>
       </div>
       <div class="col-md-4">
         <h3>Birth Support</h3>
@@ -137,32 +146,46 @@
           </li>
           <li>Phone contact during pregnancy and after the birth</li>
         </ul>
-        <button type="button" class="selectBtn" id="select_dB">
-            Select
-        </button>
+        <form action="./thanks.html" method="POST">
+          <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp"
+          data-amount="100000"
+          data-name="Doulaville"
+          data-description="Doula - Birth Support"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"></script>
+        </form>
       </div>
       <div class="col-md-4">
         <h3>Postpartum Support</h3>
         <h5>$1,500/mo</h5>
         <ul>
-          <li>Regularly visiting at your home during the early days after birth and
+          <li>Regularl visits at your home during the early days after birth and
                 into the first few months postpartum</li>
           <li>Providing physical, emotional, educational and practical support to the
                 family following the birth of the baby</li>
           <li>Caring for the mother, giving her time to recuperate and relax</li>
-          <li>Assisting with breastfeeding issues, one-on-one or over the phone
-                counseling</li>
-          <li>Helping reduce family stress by screening for postpartum mood disorders</li>
-          <li>Assisting with newborn care such as diapering, bathing, and comforting</li>
+          <li>Breastfeeding consultations</li>
+          <li>Newborn assistance: diapering, bathing, and comforting</li>
           <li>Providing information on baby soothing techniques</li>
           <li>Helping with baby sleep issues</li>
           <li>Providing day & overnight care</li>
         </ul>
+        <form action="./thanks.html" method="POST">
+          <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp"
+          data-amount="150000"
+          data-name="Doulaville"
+          data-description="Doula - Postpartum Support"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"></script>
       </div>
     </div>
    
   <footer class="bg-dark text-light">
-    <h3 class="text-center">Doulaville LLC</h3>
+    <h4 class="text-center">Doulaville LLC</h4>
     <p class="text-center">www.doulaville.com</p>
   </footer>
   <script
