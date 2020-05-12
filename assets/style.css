@@ -5,9 +5,21 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgb(170, 190, 207) inherit !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .img-container {
-    width: 300px;
+  width: 300px;
+  margin-top: 400px;
+}
+
+.navbar {
+  height: 90px;
+  color: black;
+}
+
+.nav-link {
+  font-size: 20px;
+  color: crimson;
 }
 
