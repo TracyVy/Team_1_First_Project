@@ -20,6 +20,9 @@
     .navbar {
         height: 90px;
       }
+    .navbar-brand {
+      font-size: 30px;
+    }
     #description {
       margin-top: 100px;
     }
@@ -45,10 +48,15 @@
       padding-top: 5px;
       list-style: circle;
     }
-    .form {
+    form {
       position: absolute;
-      margin-left: 140px;
       bottom: 30px;
+      margin-left: 120px;
+    }
+    footer {
+      margin-top: 20px; 
+      padding-bottom: 10px;
+      height: 140px inherit !important;
     }
   </style>
 
@@ -82,32 +90,34 @@
     
   <div class="container" id="description">
     <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-    <h3 class="text-center">Birth Support</h3>
-    <p> Birth Doulas remain current in evidence-based practices and work hard to
-        protect and support each couple’s desires and personal plans for the
-        birth of their baby.
-    </p>
-    </div>
-    <div class="col-md-1"></div>
-    <div class="row"></div>
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-    <h3 class="text-center">Postpartum Support</h3>
-    <p> Postpartum Doulas work with couples to identify what type of support
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <h3 class="text-success text-center display-4">Birth Support</h3>
+        <p> Birth Doulas remain current in evidence-based practices and work hard to
+          protect and support each couple’s desires and personal plans for the
+          birth of their baby.
+        </p>
+      </div>
+      <div class="col-md-1"></div>
+    </div>  
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <h3 class="text-success text-center display-4">Postpartum Support</h3>
+      <p> Postpartum Doulas work with couples to identify what type of support
         they need. Our doulas are experienced with multiples, preemies and
         special needs babies so we can help your family get off to a great start
         whatever your unique situation might be.
-    </p>
+      </p>
+      </div>
+      <div class="col-md-1"></div>
     </div>
-    <div class="col-md-1"></div>
   </div>
     
-  <h2>Subscriptions</h2>
+  <h3 class="text-success text-center display-4">Services & Packages</h3>
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4 bg-success">
         <h3>On-Call</h3>
         <h5>$100/hr</h5>
         <ul>
@@ -126,7 +136,7 @@
           data-locale="auto"></script>
         </form>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 bg-success">
         <h3>Birth Support</h3>
         <h5>$1,000/Package</h5>
         <ul>
@@ -157,11 +167,11 @@
           data-locale="auto"></script>
         </form>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 bg-success">
         <h3>Postpartum Support</h3>
         <h5>$1,500/Package</h5>
         <ul>
-          <li>Regularl visits at your home during the early days after birth and
+          <li>Regular visits at your home during the early days after birth and
                 into the first few months postpartum</li>
           <li>Providing physical, emotional, educational and practical support to the
                 family following the birth of the baby</li>
@@ -182,7 +192,27 @@
           data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
           data-locale="auto"></script>
       </div>
-    </div>
+    </div>    
+  </div>
+
+    <footer class="bg-dark text-light fixed-buttom">
+      <p class="text-center small text-warning" style="padding-top: 25px;"><em>⭐️⭐️⭐️⭐️⭐️ we were so lucky to
+              have the team of
+              Doulaville
+              guide us through the first 3 months with our newborn - <span class="text-light">Caroline</span></em>
+      </p>
+      </p>
+      <p class="text-center small text-warning" style="padding-top: px;"><em>⭐️⭐️⭐️⭐️⭐️ for those who think they
+              could use some
+              extra support, comfort to manage the childbirth process, you should
+              reach out to Doulaville - <span class="text-light">Maria</span></em></p>
+      </p>
+      <p class="text-center small text-warning" style="padding-top: px;"><em>⭐️⭐️⭐️⭐️⭐️ I'm extremely grateful for
+              the help
+              from Doulaville - I'm a better parent because of everything I learned while working with
+              them - <span class="text-light">John</span></em></p>
+      </p>
+  </footer>
 
   <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -201,6 +231,6 @@
   ></script>
     <!-- Adding stripe.js -->
     <!-- <script src="https://js.stripe.com/v3/"></script> -->
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>

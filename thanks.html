@@ -3,81 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/style.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <title>Thank you!</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <title>Services & Subscriptions</title>
   </head>
   <style>
     body {
-      background-color: beige;
+      height: 100vh;
+      background-color: rgb(170, 190, 207) inherit !important
+      }
+    .navbar {
+        height: 90px;
+      }
+    .navbar-brand {
+      font-size: 30px;
+    }
+    .col-md-10 {
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .card {
-      margin-top: 100px;
+      margin-bottom: 50px;
     }
     .card-img-top {
-      height: 18rem;
+      height: 15rem;
     }
-    h5 {
-      text-align: center;
+    footer {
+      margin-top: 20px; 
+      padding-bottom: 10px;
+      height: 140px inherit !important;
     }
   </style>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">Doulaville</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="card" style="width: 18rem;">
-      <img
-        class="card-img-top"
-        src="./assets/images/stethoscope.jpg"
-        alt="Card image cap"
-      />
-      <div class="card-body style=margin-top: 100px;">
-        <h5 class="card-title">Thank you!</h5>
-        <p class="card-text">
-          Thank you "Test One" for your purchase.
-        </p>
-        <p class="card-text">
-          One of our highly-skilled doulas will contact you shortly.
-        </p>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Doulaville</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </body>
+  </nav>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="card" style="width: 18rem;">
+          <img
+            class="card-img-top"
+            src="./assets/images/stethoscope.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Thank you!</h5>
+            <p class="card-text">
+              Thank you for your purchase!
+            </p>
+            <p class="card-text">
+              One of our highly-skilled doulas will contact you shortly.
+            </p>
+            <p class="card-text" id="receipt_id">
+              "Insert confirmation number here."
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+  
+  <footer class="bg-dark text-light fixed-buttom">
+      <p class="text-center small text-warning" style="padding-top: 25px;"><em>⭐️⭐️⭐️⭐️⭐️ we were so lucky to
+              have the team of
+              Doulaville
+              guide us through the first 3 months with our newborn - <span class="text-light">Caroline</span></em>
+      </p>
+      </p>
+      <p class="text-center small text-warning" style="padding-top: px;"><em>⭐️⭐️⭐️⭐️⭐️ for those who think they
+              could use some
+              extra support, comfort to manage the childbirth process, you should
+              reach out to Doulaville - <span class="text-light">Maria</span></em></p>
+      </p>
+      <p class="text-center small text-warning" style="padding-top: px;"><em>⭐️⭐️⭐️⭐️⭐️ I'm extremely grateful for
+              the help
+              from Doulaville - I'm a better parent because of everything I learned while working with
+              them - <span class="text-light">John</span></em></p>
+      </p>
+  </footer>
+
+  <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+  ></script>
+  <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+  ></script>
+  <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+  ></script>
+    <!-- Adding stripe.js -->
+    <!-- <script src="https://js.stripe.com/v3/"></script> -->
+    <!-- <script src="script.js"></script> -->
+</body>
 </html>
