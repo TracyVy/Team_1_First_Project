@@ -1,162 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+​
+
+<head>
   ​
-  <head>
-    ​
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Team_1_First_Project/assets/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    ​
-    <title>Contact</title>
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Team_1_First_Project/assets/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   ​
-  <body class="card" style="background-color: beige;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">Doulaville</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./services.html">Services</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="./contact.html"
-                >Contact <span class="sr-only">(current)</span></a
-              >
-            </li>
-          </ul>
-        </div>
+  <title>Contact</title>
+</head>
+​
+
+<body class="card" style="background-color: beige;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top ">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Doulaville</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <form action="https://formspree.io/mjvakoqr" method="POST">
+    </div>
+  </nav>
+  ​
+  <div class="container">
+    <div class="card-body">
+      <img src="./assets/images/WomensHealth.png" class="img-fluid img-thumbnail" alt="Womens Health" />
+      <div class="text-center text-muted">
+        <h2 class="card-title">Contact</h2>
+        <h5>
+          If you have any questions or would like more information about my
+          services, please feel free to contact me!
+        </h5>
+        <h5>Doula Support</h5>
+        <h5>Phone: 1-415-123-4567</h5>
+        <h5>Email: support@doulaville.com</h5>
+      </div>
       ​
-      <div class="container">
-        <div class="card-body">
-          <img
-            src="./assets/images/WomensHealth.png"
-            class="img-fluid img-thumbnail"
-            alt="Womens Health"
-          />
-          <div class="text-center text-muted">
-            <h2 class="card-title">Contact</h2>
-            <h5>
-              If you have any questions or would like to get more information
-              about our services,
-            </h5>
-            <h5>please feel free to contact us!</h5>
-            <br />
-            <h5>Doula Support</h5>
-            <h5>Phone: 1-415-123-4567</h5>
-            <h5>Email: support@doulaville.com</h5>
-          </div>
-          ​
-          <hr />
-          <label for="name">Name</label>
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              name="name"
-              class="form-control"
-              placeholder="Full Name"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
-            />
-          </div>
-          ​
-          <label for="basic-url">Email</label>
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              name="_replyto"
-              class="form-control"
-              placeholder="example@gmail.com"
-              aria-label="example@gmail.com"
-            />
-          </div>
-          ​
-          <label for="phone">Phone:</label>
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              name="number"
-              class="form-control"
-              placeholder="Phone number"
-            />
-          </div>
-          ​
-          <label for="Birth">Birth</label>
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              name="Birth"
-              class="form-control"
-              placeholder="Place of Birth"
-            />
-          </div>
-          ​
-          <label for="services">Services</label>
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              name="service"
-              class="form-control"
-              placeholder="What service(s) are you interested?"
-            />
-          </div>
-          ​
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              name="place"
-              class="form-control"
-              placeholder="How did you find me?"
-            />
-          </div>
-          ​
-          <label for="basic-url">Message</label>
-          <div class="input-group">
-            <textarea
-              class="form-control"
-              name="message"
-              aria-label="With textarea"
-            ></textarea>
-          </div>
-          <div class="card-header">
-            <button class="btn btn-secondary" type="submit">Submit</button>
-          </div>
+      <hr />
+
+      <form id="my-form" action="https://formspree.io/mjvakoqr" method="POST">
+        <label for="inputName">Name</label>
+        <div class="input-group mb-3">
+          <input type="text" name="name" class="form-control contact-input" id="inputName" placeholder="Full Name"
+            aria-label="Username" aria-describedby="basic-addon1" />
         </div>
-      </div>
-    </form>
-    ​ ​
-    <!-- <footer class="bg-dark text-light">
+
+        <label for="inputEmail">Email</label>
+        <div class="input-group mb-3">
+          <input type="text" name="Email" class="form-control contact-input" id="inputEmail"
+            placeholder="example@gmail.com" aria-label="example@gmail.com" />
+        </div>
+
+        <label for="inputPhone">Phone:</label>
+        <div class="input-group mb-3">
+          <input type="text" name="number" class="form-control contact-input" id="inputPhone"
+            placeholder="Phone number" />
+        </div>
+
+        <label for="inputBirth">Birth</label>
+        <div class="input-group mb-3">
+          <input type="text" name="Place of Birth" class="form-control contact-input" id="inputBirth"
+            placeholder="Place of Birth" />
+        </div>
+
+        <label for="inputServices">Services</label>
+        <div class="input-group mb-3">
+          <input type="text" name="Type of service" class="form-control contact-input" id="inputServices"
+            placeholder="What service(s) are you interested?" />
+        </div>
+
+        <div class="input-group mb-3">
+          <input type="text" name="place" class="form-control contact-input" id="inputPlace"
+            placeholder="How did you find me?" />
+        </div>
+
+        <label for="inputMessage">Message</label>
+        <div class="input-group">
+          <textarea class="form-control contact-input" id="inputMessage" name="message"
+            aria-label="With textarea"></textarea>
+        </div>
+        <div class="card-header">
+          <button class="btn btn-secondary" id="my-form-button" type="submit">
+            Submit
+          </button>
+          <p id="my-form-status"></p>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <!-- <footer class="bg-dark text-light">
       <h3 class="text-center">Doulaville LLC</h3>
       <p class="text-center">www.doulaville.com</p>
     </footer> -->
-    ​
-    <script src="/scripts/app.js"></script>
-  </body>
   ​
+  <script src="./scripts/app.js"></script>
+</body>
+​
+
 </html>
