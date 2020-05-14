@@ -9,7 +9,7 @@ body {
 
 .img-container {
   width: 600px;
-  margin-top: 780px;
+  margin-top: 850px;
   margin-left: 270px;
 }
 
@@ -19,7 +19,8 @@ h1 {
   font-size: 30px;
 }
 
-h2 {
+h2,
+h4 {
   text-align: center;
 }
 
@@ -28,41 +29,29 @@ h3 {
   margin-bottom: 0em;
 }
 
-h4 {
-  text-align: center;
-}
-
 h5 {
   margin-top: 5px;
   font-size: 50px;
 }
 
+p,
 .container {
   margin-bottom: 30px;
 }
 
-p {
-  margin-bottom: 0;
-}
-
 .navbar {
-  padding-top: 40px;
+  padding-top: 16px;
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 2;
 }
 
-/* .nav-link {
-    font-size: 20px;
-    color: crimson;
-} */
-
-/* .card {
-  border-color: darkorange;
-  border-width: thick;
-} */
-
 .navbar-brand {
   font-size: 30px;
+  margin-left: 183px;
+}
+
+.navbar-collapse {
+  margin-right: 200px;
 }
