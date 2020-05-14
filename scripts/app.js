@@ -1,14 +1,21 @@
 window.addEventListener("DOMContentLoaded", function () {
+  $("#success").hide();
+
   // get the form elements defined in your form HTML above
   var form = document.getElementById("my-form");
   var button = document.getElementById("my-form-button");
   var status = document.getElementById("my-form-status");
+  var inputName = document.getElementById("inputName");
   // Success and Error functions for after the form is submitted
   function success() {
-    form.reset();
+    var userName = inputName.value;
+
     button.style = "display: none ";
-    status.innerHTML = "Thanks!";
+    status.innerHTML = "Thanks for your inquery, " + userName + "!";
+    form.reset();
+
   }
+
   function error() {
     status.innerHTML = "Oops! There was a problem.";
   }
@@ -27,6 +34,9 @@ function ajax(method, url, data, success, error) {
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== XMLHttpRequest.DONE) return;
     if (xhr.status === 200) {
+      console.log(xhr.response);
+      $("#my-form").hide();
+      $("#success").show();
       success(xhr.response, xhr.responseType);
     } else {
       error(xhr.status, xhr.response, xhr.responseType);
