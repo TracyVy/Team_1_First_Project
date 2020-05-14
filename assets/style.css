@@ -1,12 +1,10 @@
 body {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-body.card {
-  border-style: none;
+  background-color: beige;
 }
 
 .img-container {
@@ -49,7 +47,10 @@ p {
 
 .navbar {
   padding-top: 40px;
-  height: 90px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
 
 /* .nav-link {
