@@ -1,19 +1,22 @@
 // Use of "browser payment APIs". Get doc ready for jQuery
 var stripe_pk_API = Stripe("pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp");
-// var secretKey = Stripe("sk_test_ouWhRvyXxMFfgerkgNAERERC00SEIgzWxm");
+let secretKey = "sk_test_ouWhRvyXxMFfgerkgNAERERC00SEIgzWxm";
 
 $(document).ready(function () {
-  var invoiceID = "";
+  // var invoiceID = "";
 
-  $.ajax({
-    type: "GET",
-    url: "https://api.stripe.com/v1/",
+  $.get({
+    url: "https://api.stripe.com/v1/charges",
     datatype: "JSON",
-  }).then(function (response) {
-    console.log(response);
-    invoiceID = response.invoice.id;
+    headers: {
+      Authorization: "Bearer " + secretKey,
+    },
+    contentType: "application/json; charset=utf-8",
+    success: function (result) {
+      console.log(JSON.stringify(result.expand));
+      const receiptID = document.getElementById("receipt_id");
+      $("#receipt_id").innerHTML = JSON.stringify(result);
+    },
+    error: function (error) {},
   });
-  $("#receipt_id").append(
-    `<p>Confirmation #: ${invoiceID} . Please keep for your records.</p>`
-  );
 });
