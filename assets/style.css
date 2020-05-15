@@ -1,67 +1,57 @@
 body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-body.card {
-    border-style: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: beige;
 }
 
 .img-container {
-    width: 600px;
-    margin-top: 850px;
-    margin-left: 270px;
+  width: 600px;
+  margin-top: 850px;
+  margin-left: 270px;
 }
 
 h1 {
-    margin-bottom: 450px;
-    margin-left: 100px;
-    font-size: 30px;
+  margin-bottom: 450px;
+  margin-left: 100px;
+  font-size: 30px;
 }
 
-h2 {
-    text-align: center;
+h2,
+h4 {
+  text-align: center;
 }
 
 h3 {
-    margin-top: 10px;
-    margin-bottom: 0em;
-}
-
-h4 {
-    text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0em;
 }
 
 h5 {
-    margin-top: 5px;
-    font-size: 50px;
+  margin-top: 5px;
+  font-size: 50px;
 }
 
+p,
 .container {
-    margin-bottom: 30px;
-}
-
-p {
-    margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .navbar {
-    padding-top: 35px;
-    height: 90px;
-}
-
-/* .nav-link {
-    font-size: 20px;
-    color: crimson;
-} */
-
-.card {
-    border-color: darkorange;
-    border-width: thick;
+  padding-top: 16px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
 
 .navbar-brand {
-    font-size: 30px;
+  font-size: 30px;
+  margin-left: 183px;
+}
+
+.navbar-collapse {
+  margin-right: 200px;
 }
