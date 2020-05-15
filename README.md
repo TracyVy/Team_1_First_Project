@@ -8,7 +8,6 @@ A reactive website providing new or expecting parents information on how doulas 
 
 ## Motivation
 
-
 ## Tech/framework used
 
 Ex. -
@@ -44,7 +43,16 @@ Depending on the size of the project, if it is small and simple enough the refer
 - Card: 4242 4242 4242
 - Expiry: 01/23 CVC: 456
 
-## Freeform API
+## FORMSPREE API
+
+\*\* Simple Form
+
+- https://formspree.io/
+
+- Your Name:
+- Your Email:
+- Message:
+- Send
 
 ## How to use?
 
