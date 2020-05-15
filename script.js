@@ -1,22 +1,67 @@
-// Use of "browser payment APIs". Get doc ready for jQuery
-var stripe_pk_API = Stripe("pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp");
-let secretKey = "sk_test_ouWhRvyXxMFfgerkgNAERERC00SEIgzWxm";
+var stripe = Stripe("pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp");
+var selectOC = document.getElementById("checkout-button-sku_HHOoZIjDmfQWmi");
+var selectBS = document.getElementById("checkout-button-sku_HHPHHtsPhSg3q5");
+var selectPPS = document.getElementById("checkout-button-sku_HHPViFaglEMZsD");
 
-$(document).ready(function () {
-  // var invoiceID = "";
-
-  $.get({
-    url: "https://api.stripe.com/v1/charges",
-    datatype: "JSON",
-    headers: {
-      Authorization: "Bearer " + secretKey,
-    },
-    contentType: "application/json; charset=utf-8",
-    success: function (result) {
-      console.log(JSON.stringify(result.expand));
-      const receiptID = document.getElementById("receipt_id");
-      $("#receipt_id").innerHTML = JSON.stringify(result);
-    },
-    error: function (error) {},
+(function () {
+  selectOC.addEventListener("click", function () {
+    stripe
+      .redirectToCheckout({
+        lineItems: [{ price: "sku_HHOoZIjDmfQWmi", quantity: 1 }],
+        mode: "payment",
+        successUrl:
+          "https://tracyvy.github.io/Team_1_First_Project/thanks/html",
+        cancelUrl: "https://tracyvy.github.io/Team_1_First_Project/canceled",
+      })
+      .then(function (result) {
+        if (result.error) {
+          // If `redirectToCheckout` fails due to a browser or network
+          // error, display the localized error message to your customer.
+          var displayError = document.getElementById("error-message");
+          displayError.textContent = result.error.message;
+        }
+      });
   });
-});
+
+  selectBS.addEventListener("click", function () {
+    stripe
+      .redirectToCheckout({
+        lineItems: [{ price: "sku_HHPHHtsPhSg3q5", quantity: 1 }],
+        mode: "payment",
+        successUrl:
+          "https://tracyvy.github.io/Team_1_First_Project/thanks.html?session_id={CHECKOUT_SESSION_ID}",
+        cancelUrl: "https://tracyvy.github.io/Team_1_First_Project/canceled",
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById("error-message");
+          displayError.textContent = result.error.message;
+        }
+      });
+  });
+
+  selectPPS.addEventListener("click", function () {
+    stripe
+      .redirectToCheckout({
+        lineItems: [{ price: "sku_HHPViFaglEMZsD", quantity: 1 }],
+        mode: "payment",
+        successUrl:
+          "https://tracyvy.github.io/Team_1_First_Project/thanks.html",
+        cancelUrl: "https://tracyvy.github.io/Team_1_First_Project/canceled",
+      })
+      .then(function (result) {
+        if (result.error) {
+          var displayError = document.getElementById("error-message");
+          displayError.textContent = result.error.message;
+        }
+      });
+  });
+
+  $.ajax({
+    type: "GET",
+    url: "https://api.stripe.com/v1/checkout/sessions/ ",
+    datatype: "JSON",
+  }).then(function (response) {
+    console.log(response);
+  });
+})();
